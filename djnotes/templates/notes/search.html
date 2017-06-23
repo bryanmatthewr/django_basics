@@ -17,10 +17,9 @@ name="title" placeholder="Take a note...">
 </form>
 <br>
 
-<form class="inline-form" action=" {% url 'search' %} " method="post">
-{% csrf_token %} 
+<form class="inline-form" action=" {% url 'search' %} " method="get">
 <input type="text" class="form-control clear-focus-highlight" id="txtNewNote"
-name="title" placeholder="Search a note ...">
+name="title" placeholder="Search a note..." value="{{ title }}">
 <input class="btn btn-raised btn-primary btn-sm" type="submit" value="Search">
 </form>
 
